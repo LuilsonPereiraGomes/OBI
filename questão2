@@ -1,0 +1,37 @@
+Exercício 2 - Converter string para maiúsculas/minúsculas
+Para resolver este exercício, vamos criar um programa que:
+
+Pede ao usuário para digitar uma frase
+
+Converte a frase para letras maiúsculas
+
+Converte a frase para letras minúsculas
+
+Exibe ambas as versões
+
+python
+# Solicita a entrada do usuário
+frase = input("Digite uma frase: ")
+
+# Converte para maiúsculas e minúsculas
+maiusculas = frase.upper()
+minusculas = frase.lower()
+
+# Exibe os resultados
+print(f"Frase em maiúsculas: {maiusculas}")
+print(f"Frase em minúsculas: {minusculas}")
+Como funciona:
+input() captura a frase digitada pelo usuário
+
+upper() converte todos os caracteres para maiúsculas
+
+lower() converte todos os caracteres para minúsculas
+
+Os print exibem os resultados formatados
+
+Exemplo:
+Se o usuário digitar "Python é Incrível", o programa mostrará:
+
+Frase em maiúsculas: PYTHON É INCRÍVEL
+Frase em minúsculas: python é incrível
+Observe que os métodos upper() e lower() preservam os acentos e caracteres especiais, apenas alterando seu caso.
