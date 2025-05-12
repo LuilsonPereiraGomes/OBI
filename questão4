@@ -1,0 +1,47 @@
+Exercício 4 - Substituir vogais por asteriscos
+Para resolver este exercício, vamos criar um programa que:
+
+Pede ao usuário para digitar uma frase
+
+Substitui todas as vogais (maiúsculas e minúsculas) por asteriscos
+
+Mantém as consoantes e outros caracteres inalterados
+
+python
+# Solicita a entrada do usuário
+frase = input("Digite uma frase: ")
+
+# Define as vogais que serão substituídas (incluindo maiúsculas e minúsculas)
+vogais = "aeiouAEIOUáéíóúÁÉÍÓÚâêîôûÂÊÎÔÛãõÃÕ"
+
+# Substitui cada vogal por *
+resultado = ""
+for letra in frase:
+    if letra in vogais:
+        resultado += "*"
+    else:
+        resultado += letra
+
+# Exibe o resultado
+print(resultado)
+Versão alternativa usando compreensão de lista:
+python
+frase = input("Digite uma frase: ")
+vogais = "aeiouAEIOUáéíóúÁÉÍÓÚâêîôûÂÊÎÔÛãõÃÕ"
+resultado = ''.join(['*' if letra in vogais else letra for letra in frase])
+print(resultado)
+Como funciona:
+Definimos todas as variações de vogais que queremos substituir
+
+Percorremos cada caractere da frase
+
+Se o caractere for uma vogal, substituímos por *
+
+Se não for, mantemos o caractere original
+
+Construímos uma nova string com o resultado
+
+Exemplo para a entrada "Aprendendo Java":
+
+*pr*nd*nd* J*v*
+Observação: O programa considera vogais acentuadas e suas versões maiúsculas também.
