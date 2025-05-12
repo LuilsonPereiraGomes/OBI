@@ -1,0 +1,51 @@
+Exercício 5 - Verificar palíndromo
+Vamos criar um programa que:
+
+Recebe uma palavra/frase do usuário
+
+Remove espaços e pontuação
+
+Converte tudo para minúsculas
+
+Verifica se é igual à sua versão invertida
+
+python
+def eh_palindromo(texto):
+    # Remove espaços e caracteres não alfabéticos, converte para minúsculas
+    texto_tratado = ''.join(c for c in texto.lower() if c.isalpha())
+    
+    # Compara com a versão invertida
+    return texto_tratado == texto_tratado[::-1]
+
+# Entrada do usuário
+frase = input("Digite uma palavra ou frase: ")
+
+# Verificação e resultado
+if eh_palindromo(frase):
+    print("É um palíndromo!")
+else:
+    print("Não é um palíndromo.")
+Como funciona:
+texto.lower() - Converte tudo para minúsculas
+
+if c.isalpha() - Mantém apenas letras (remove espaços e pontuação)
+
+[::-1] - Inverte a string
+
+A comparação verifica se a string original é igual à invertida
+
+Exemplos:
+Entrada: "Socorram-me subi no onibus em Marrocos"
+Saída: "É um palíndromo!"
+
+Entrada: "Python"
+Saída: "Não é um palíndromo."
+
+Bônus:
+Para ficar mais visual, podemos mostrar a comparação:
+
+python
+texto_tratado = ''.join(c for c in frase.lower() if c.isalpha())
+print(f"Original: {texto_tratado}")
+print(f"Invertido: {texto_tratado[::-1]}")
+Isso ajuda o usuário a entender por que a frase foi considerada palíndromo ou não.
