@@ -1,0 +1,36 @@
+Exercício 1 - Contar caracteres de uma string
+Para resolver este exercício, vamos criar um programa que:
+
+Pede ao usuário para digitar uma palavra/frase
+
+Remove todos os espaços em branco
+
+Conta quantos caracteres restam
+
+Exibe o resultado
+
+linguaguem python
+# Solicita a entrada do usuário
+texto = input("Digite uma palavra ou frase: ")
+
+# Remove os espaços em branco e conta os caracteres restantes
+quantidade = len(texto.replace(" ", ""))
+
+# Exibe o resultado
+print(f"{quantidade} caracteres")
+Como funciona:
+input() captura o texto digitado pelo usuário
+
+replace(" ", "") substitui todos os espaços por nada (remove-os)
+
+len() conta o número de caracteres na string resultante
+
+O print final exibe o resultado formatado
+
+Para o exemplo "Olá mundo":
+
+Remove os espaços -> "Olámundo"
+
+Conta os caracteres -> 8 (O, l, á, m, u, n, d, o)
+
+Exibe "8 caracteres"
