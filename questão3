@@ -1,0 +1,34 @@
+Exercício 3 - Imprimir cada caractere separado
+Vamos criar um programa que:
+
+Pede ao usuário para digitar uma palavra
+
+Percorre cada caractere da palavra
+
+Imprime cada caractere em uma linha separada
+
+python
+# Solicita a entrada do usuário
+palavra = input("Digite uma palavra: ")
+
+# Imprime cada letra em uma linha separada
+for letra in palavra:
+    print(letra)
+Como funciona:
+input() captura a palavra digitada pelo usuário
+
+O loop for percorre cada caractere da string
+
+print(letra) exibe cada caractere em uma nova linha
+
+Exemplo para a entrada "Java":
+
+J
+a
+v
+a
+Versão alternativa (se quiser separar por espaços em vez de quebras de linha):
+python
+palavra = input("Digite uma palavra: ")
+print(' '.join(palavra))
+Esta versão produziria: J a v a em uma única linha
